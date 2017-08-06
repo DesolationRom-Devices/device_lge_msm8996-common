@@ -187,5 +187,11 @@ WIFI_DRIVER_FW_PATH_STA     := "/system/etc/firmware/fw_bcmdhd.bin"
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
+# Enable dex pre-opt to speed up initial boot
+ifeq ($(HOST_OS),linux)
+  WITH_DEXPREOPT := true
+  WITH_DEXPREOPT_PIC := true
+endif
+
 # inherit from the proprietary version
 -include vendor/lge/msm8996-common/BoardConfigVendor.mk
