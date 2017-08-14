@@ -158,6 +158,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GestureHandler
 
+# Gesture handler
+PRODUCT_PACKAGES += \
+    AODHandler
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8996 \

@@ -16,6 +16,10 @@
 # Gestures
 /sys/devices/virtual/input/lge_touch/lpwg_notify                    u:object_r:sysfs_gesture:s0
 
+# AOD
+/sys/class/graphics/fb0/aod                                         u:object_r:sysfs_aod:s0
+/sys/class/graphics/fb0/keep_aod                                    u:object_r:sysfs_aod:s0
+
 # Init
 /system/bin/init\.power\.sh                                         u:object_r:init_power_exec:s0
 
