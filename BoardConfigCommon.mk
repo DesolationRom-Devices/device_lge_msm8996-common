@@ -73,9 +73,15 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 TARGET_USES_INTERACTION_BOOST := true
 
+USE_DEVICE_SPECIFIC_MEDIA := true
+DEVICE_SPECIFIC_MEDIA_PATH := hardware/qcom/media/msm8996
+
+USE_DEVICE_SPECIFIC_AUDIO := true
+DEVICE_SPECIFIC_AUDIO_PATH := hardware/qcom/audio
+
 # Display
 USE_DEVICE_SPECIFIC_DISPLAY := true
-DEVICE_SPECIFIC_DISPLAY_PATH := hardware/qcom/display-caf/msm8998
+DEVICE_SPECIFIC_DISPLAY_PATH := hardware/qcom/display/msm8996
 TARGET_USES_COLOR_METADATA := false
 BOARD_USES_ADRENO := true
 TARGET_CONTINUOUS_SPLASH_ENABLED := true
@@ -145,7 +151,7 @@ TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 TARGET_RIL_VARIANT := caf
 
 # SELinux policies
-include device/qcom/sepolicy/sepolicy.mk
+#include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 
 # Use Snapdragon LLVM, if available
