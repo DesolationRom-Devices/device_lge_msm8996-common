@@ -140,7 +140,7 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.msm8996
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 
 # Qualcomm
-#BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QC_TIME_SERVICES := true
 #PRODUCT_BOOT_JARS += tcmiface tcmclient com.qti.dpmframework dpmapi com.qti.location.sdk
 
@@ -152,7 +152,7 @@ TARGET_RIL_VARIANT := caf
 
 # SELinux policies
 #include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 
 # Use Snapdragon LLVM, if available
 # TARGET_USE_SDCLANG := true

@@ -27,10 +27,6 @@ PRODUCT_AAPT_PREF_CONFIG := 560dpi
 
 TARGET_RECOVERY_DENSITY := xxhdpi
 
-$(call inherit-product, frameworks/native/build/phone-xxxhdpi-4096-dalvik-heap.mk)
-
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-4096-hwui-memory.mk)
-
 # Add WiFi Config files
 # TEMP: These are broken right now
 #$(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
@@ -200,6 +196,10 @@ PRODUCT_COPY_FILES += \
 # IMS
 PRODUCT_PACKAGES += \
     libshims_ims
+
+# Camera Shim
+PRODUCT_PACKAGES += \
+    libshims_camera
 
 # USB HAL
 PRODUCT_PACKAGES += \
